@@ -35,12 +35,12 @@ export default function Home() {
         <div className="mt-8 flex flex-col sm:flex-row gap-4">
           <Link href="/costing-sheet">
             <button className="bg-blue-600 text-white px-8 py-3 rounded-xl text-lg font-medium hover:bg-blue-700 transition">
-              Go to Costing Sheet
+              Costing Sheet
             </button>
           </Link>
           <Link href="/material-master">
             <button className="bg-gray-700 text-white px-8 py-3 rounded-xl text-lg font-medium hover:bg-gray-800 transition">
-              Go to Material Master
+              Material Master
             </button>
           </Link>
         </div>
