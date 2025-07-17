@@ -5,25 +5,49 @@ import Image from 'next/image';
 
 export default function Home() {
   return (
-    <div className="flex flex-col items-center justify-center min-h-screen p-8 space-y-10">
-      <Image src="/next.svg" alt="Next.js Logo" width={180} height={38} priority />
+    <div className="min-h-screen flex flex-col items-center justify-between bg-gray-50 px-6 py-10">
+      {/* Header */}
+      <header className="w-full max-w-5xl flex items-center justify-between mb-10">
+        <div className="flex items-center gap-2">
+          <Image src="/next.svg" alt="Next.js Logo" width={40} height={40} />
+          <span className="text-lg font-semibold text-gray-800">Costing Manager</span>
+        </div>
+        <nav className="hidden sm:flex gap-4">
+          <Link href="/costing-sheet" className="text-gray-600 hover:text-blue-600 transition">
+            Costing Sheet
+          </Link>
+          <Link href="/material-master" className="text-gray-600 hover:text-blue-600 transition">
+            Material Master
+          </Link>
+        </nav>
+      </header>
 
-      <h1 className="text-2xl font-bold text-center">Welcome to Costing Manager</h1>
+      {/* Hero Section */}
+      <main className="text-center flex flex-col items-center flex-1 justify-center">
+        <h1 className="text-3xl sm:text-5xl font-extrabold text-gray-800 leading-tight">
+          Streamline Your Product Costing
+        </h1>
+        <p className="mt-4 text-lg sm:text-xl text-gray-600 max-w-xl">
+          Manage your materials, calculate product costs in real-time, and make data-driven decisions — all in one place.
+        </p>
 
-      <div className="flex flex-col sm:flex-row gap-4">
-        <Link href="/costing-sheet">
-          <button className="bg-blue-600 text-white px-6 py-3 rounded hover:bg-blue-700">
-            Go to Costing Sheet
-          </button>
-        </Link>
-        <Link href="/material-master">
-          <button className="bg-gray-600 text-white px-6 py-3 rounded hover:bg-gray-700">
-            Go to Material Master
-          </button>
-        </Link>
-      </div>
+        {/* CTA Buttons */}
+        <div className="mt-8 flex flex-col sm:flex-row gap-4">
+          <Link href="/costing-sheet">
+            <button className="bg-blue-600 text-white px-8 py-3 rounded-xl text-lg font-medium hover:bg-blue-700 transition">
+              Go to Costing Sheet
+            </button>
+          </Link>
+          <Link href="/material-master">
+            <button className="bg-gray-700 text-white px-8 py-3 rounded-xl text-lg font-medium hover:bg-gray-800 transition">
+              Go to Material Master
+            </button>
+          </Link>
+        </div>
+      </main>
 
-      <footer className="mt-20 text-sm text-gray-500">
+      {/* Footer */}
+      <footer className="mt-10 text-sm text-gray-500 text-center">
         Built with ❤️ using Next.js + TypeScript
       </footer>
     </div>
